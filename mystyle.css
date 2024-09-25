@@ -1,0 +1,236 @@
+* {
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	text-transform:capitalize;
+	text-decoration:none;
+}
+body {
+	min-height:100vh;
+	margin:0;
+	padding:0;
+}
+
+@media print {
+	#sidebar, #content , #menu, #footer, #banner {
+		dispaly:none;
+		background-color:white;
+}
+}
+
+header {
+	position:sticky;
+	top:0;
+	right:0;
+	left:0;
+	background:#ffffff;
+	box-shadow:0 5px 10px rgba(0,0,0,0.1);
+	padding:0px 7%;
+	display:flex;
+	align-items:center;
+	justify-content:space-between;
+	z-index:999;
+	transition:0.6s;
+}
+header .logo {
+	font-weight:bolder;
+	font-size:20px;
+	color:lightblue;
+	
+}
+header .navbar ul  {
+	list-style-type:none;
+}
+header .navbar ul li {
+	position:relative;
+	float:left;
+}
+header .navbar ul li a {
+	font-size:20px;
+	padding:20px;
+	color:#333;
+	display:block;
+	border-radius:20px;
+	 transition:0.3s;
+	 
+}
+header .navbar ul li a:hover {
+	background:rgb(187,187,187);
+	color:#fff;
+     border-radius:20px;
+	 transition:0.3s;
+	 
+}
+header .navbar ul li ul {
+	position:absolute;
+	left:0;
+	width:200px;
+	background:rgba(213,213,213);
+	display:none;
+	border-radius:20px;
+	 transition:0.3s;
+	 
+}
+
+	
+header .navbar ul li ul li {
+	width:100%;
+	border-top:1px solid rgba (0,0,0,0.1);
+	border-radius:2px solid gray;
+	
+}
+header .navbar ul li ul li ul{
+	left:200px;
+	top:0;
+}
+header .navbar ul li:focus-within > ul,
+header .navbar ul li:hover > ul {
+	display:initial;
+	 
+}
+
+#menu-bar{
+	display:none;
+}
+header label {
+	font-size:20px;
+	color:#333;
+	cursor:pointer;
+	display:none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:890px){
+	header {
+		padding:20px;
+	}
+
+header label {
+	display:initial;
+}
+header .navbar {
+	position:absolute;
+	top:100%;
+	left:0;
+	right:0;
+	background:#fff;
+	border-top:1px solid rgba (0,0,0,.1);
+	display:none;
+	justify-content:center;
+	text-align:center;
+	
+}
+	header .navbar ul li {
+		width:100%;
+	}
+	header .navbar ul li ul {
+		position:relative;
+		width:100%;
+		}
+	header .navbar ul li ul li {
+		background:rgba(132,255,193,0.2);
+	}
+	header .navbar ul li ul li ul{
+		width:100%;
+		left:0;
+	}
+	
+#menu-bar:checked ~ .navbar {
+	display:initial;
+}
+}
+ #content {
+	background-color:white;
+	min-height:500px;
+	width:100%;
+	padding:20 40px;
+	
+	}
+
+#footer  {
+	background-color:#444;
+	width:100%;
+	height:200px;
+	clear:both;
+	posiion:fixed;
+	bottom:0;
+	padding:10px;
+	text-align:center;
+	border:1px solid #444;
+}
+
+
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+	
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+	width:100%;
+	border:1px solid lightgreen;
+	position:relative;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: right;
+    width: 75%;
+    margin-top: 6px;
+}
+
+.row:after {
+    display: table;
+    clear: both;
+	content:"";
+}
+
+
+
+
